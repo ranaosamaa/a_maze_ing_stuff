@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "author": "Rana Osama",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": 141,
+      "left": -218,
+      "attrs": { "color": "#eeefed" }
+    },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -114.6, "left": -259.8, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 223.94,
+      "left": -76.57,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn1",
+      "top": 230.9,
+      "left": -150.1,
+      "rotate": 90,
+      "attrs": { "color": "grey", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 230.9,
+      "left": 51.5,
+      "rotate": 90,
+      "attrs": { "color": "blue", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn3",
+      "top": 230.9,
+      "left": 109.1,
+      "rotate": 90,
+      "attrs": { "color": "yellow", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn4",
+      "top": 231.7,
+      "left": 170.1,
+      "rotate": 270,
+      "attrs": { "color": "green", "xray": "1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn5",
+      "top": 230.9,
+      "left": 224.3,
+      "rotate": 90,
+      "attrs": { "color": "white", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.2", "bb1:tn.1", "black", [ "v19.1", "h-168.9", "v86.4" ] ],
+    [ "uno:5V", "bb1:tp.1", "red", [ "v28.7", "h-149.8", "v67.2" ] ],
+    [ "uno:GND.3", "bb1:bn.1", "black", [ "v38.3", "h-159.2", "v230.4" ] ],
+    [ "bb1:6b.g", "bb1:bn.4", "black", [ "v0" ] ],
+    [ "bb1:27b.g", "bb1:bn.21", "black", [ "v0" ] ],
+    [ "bb1:33b.g", "bb1:bn.26", "black", [ "v0" ] ],
+    [ "bb1:39b.g", "bb1:bn.31", "black", [ "v0" ] ],
+    [ "bb1:45b.g", "bb1:bn.36", "black", [ "v0" ] ],
+    [ "bb1:41t.d", "uno:3", "green", [ "v-364.8", "h-220.8" ] ],
+    [ "uno:2", "bb1:35t.d", "gold", [ "v-28.8", "h157.7", "v355.2" ] ],
+    [ "bb1:29t.d", "uno:4", "blue", [ "v-374.4", "h-9.6" ] ],
+    [ "bb1:47t.d", "uno:5", "white", [ "v-384", "h-297.6" ] ],
+    [ "uno:6", "bb1:8t.d", "gray", [ "v-19.2", "h-217.1", "v297.6", "h153.6" ] ],
+    [ "btn1:1.l", "bb1:8t.e", "", [ "$bb" ] ],
+    [ "btn1:2.l", "bb1:6t.e", "", [ "$bb" ] ],
+    [ "btn1:1.r", "bb1:8b.f", "", [ "$bb" ] ],
+    [ "btn1:2.r", "bb1:6b.f", "", [ "$bb" ] ],
+    [ "btn2:1.l", "bb1:29t.e", "", [ "$bb" ] ],
+    [ "btn2:2.l", "bb1:27t.e", "", [ "$bb" ] ],
+    [ "btn2:1.r", "bb1:29b.f", "", [ "$bb" ] ],
+    [ "btn2:2.r", "bb1:27b.f", "", [ "$bb" ] ],
+    [ "btn3:1.l", "bb1:35t.e", "", [ "$bb" ] ],
+    [ "btn3:2.l", "bb1:33t.e", "", [ "$bb" ] ],
+    [ "btn3:1.r", "bb1:35b.f", "", [ "$bb" ] ],
+    [ "btn3:2.r", "bb1:33b.f", "", [ "$bb" ] ],
+    [ "btn4:1.l", "bb1:39b.f", "", [ "$bb" ] ],
+    [ "btn4:2.l", "bb1:41b.f", "", [ "$bb" ] ],
+    [ "btn4:1.r", "bb1:39t.e", "", [ "$bb" ] ],
+    [ "btn4:2.r", "bb1:41t.e", "", [ "$bb" ] ],
+    [ "btn5:1.l", "bb1:47t.e", "", [ "$bb" ] ],
+    [ "btn5:2.l", "bb1:45t.e", "", [ "$bb" ] ],
+    [ "btn5:1.r", "bb1:47b.f", "", [ "$bb" ] ],
+    [ "btn5:2.r", "bb1:45b.f", "", [ "$bb" ] ],
+    [ "oled1:GND", "bb1:17t.e", "", [ "$bb" ] ],
+    [ "oled1:VCC", "bb1:18t.e", "", [ "$bb" ] ],
+    [ "oled1:SCL", "bb1:19t.e", "", [ "$bb" ] ],
+    [ "oled1:SDA", "bb1:20t.e", "", [ "$bb" ] ],
+    [ "bb1:tn.13", "bb1:17t.d", "black", [ "v0" ] ],
+    [ "bb1:tp.14", "bb1:18t.d", "red", [ "v0" ] ],
+    [ "uno:A5", "bb1:19t.d", "orange", [ "v57.5", "h-14.9" ] ],
+    [ "uno:A4", "bb1:20t.d", "#8f4814", [ "v47.9", "h-5.4" ] ]
+  ],
+  "dependencies": {}
+}
